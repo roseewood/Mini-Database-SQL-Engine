@@ -2,8 +2,8 @@ CC = gcc
 CFLAGS = -Wall
 OBJ = main.o process.o memory.o filesystem.o
 
-minikernel: $(OBJ)
-	$(CC) $(OBJ) -o minikernel
+minios: $(OBJ)
+	$(CC) $(OBJ) -o minios
 
 main.o: main.c
 	$(CC) $(CFLAGS) -c main.c
@@ -18,4 +18,4 @@ filesystem.o: filesystem.c
 	$(CC) $(CFLAGS) -c filesystem.c
 
 clean:
-	rm -f *.o minikernel
+	rm -f *.o minios
